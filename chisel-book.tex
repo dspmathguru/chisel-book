@@ -514,7 +514,7 @@ extension provides Scala support.
 On the left bar select \emph{Extensions} and search for \emph{Metals} and install \emph{Scala (Metals)}.
 To import an \code{sbt} based project open the folder with \emph{File - Open}. 
 
-%Open the project folder, e.g., t-crest/patmos/hardware, by selecting File/Open Folder. Make sure the sbt project uses at least Scala version 2.11.12
+%Open the project folder, e.g., t-crest/patmos/hardware, by selecting File/Open Folder. Make sure the sbt project will use at least Scala version 2.11.12
 %On the left bar select "Metals" and then select "Import build" - This may take a while
 %That's it. However, running and debugging the project still doesn't work.
 
@@ -604,7 +604,7 @@ If the repository contains support for your board, start Quartus, open the proje
 compile it by pressing the \emph{Play} button, and configure the FPGA board
 with the \emph{Programmer} button and one of the LEDs should blink.
 
-{\bf Gratulation! You managed to get your first design in Chisel running in an FPGA!}
+{\bf Congratulations! You managed to get your first design in Chisel running in an FPGA!}
 
 If the LED is not blinking, check the status of reset. On the DE2-115 configuration,
 the reset input is connected to SW0.
@@ -1808,7 +1808,7 @@ A try with the Chisel operator \code{:=}, as shown below,
 \noindent results in a runtime exception: \code{Cannot reassign to read-only}.
 
 Chisel also supports describing combinational circuits with conditional updates.
-Such a circuit is declared as a \code{Wire}. Then you uses conditional operations,
+Such a circuit is declared as a \code{Wire}. Then you use conditional operations,
 such as \code{when}, to describe the logic of the circuit.
 The following code declares a \code{Wire} \code{w} of type \code{UInt} and assigns a default
 value of \code{0}. The \code{when} block takes a Chisel \code{Bool} and reassigns
@@ -1922,7 +1922,7 @@ It is intended to avoid situations with incomplete assignments for combinational
 languages such as VHDL and Verilog. Chisel does not allow incomplete assignments.
 
 In the example before we used unsigned integers for the signals. Maybe a clearer representation
-of an encode circuit uses the binary notation:
+of an encode circuit use the binary notation:
 
 \shortlist{code/encdec_decbin.txt}
 
@@ -1981,7 +1981,7 @@ works only as expected when the input signal is one-hot coded. For all other inp
 is undefined. As we cannot describe a function with undefined outputs, we use a default
 assignment that catches all undefined input patterns.
 
-The following Chisel code assigns a default value of 00 and then uses the switch statement
+The following Chisel code assigns a default value of 00 and then use the switch statement
 for the legal input values.
 
 \shortlist{code/encdec_enc.txt}
@@ -2160,7 +2160,7 @@ of a signal by comparing its current value with the one from the last clock cycl
 
 \shortlist{code/sequ_reg_rising.txt}
 
-Now that we have explored all basic uses of a register, we put those registers to
+Now that we have explored all basic use of a register, we put those registers to
 good use and build more interesting sequential circuits.
 
 \section{Counters}
@@ -2425,12 +2425,12 @@ circuit implements a 4-tap delay from \code{din} to \code{dout}.
 
 The Chisel code for this simple shift register does: (1) create a 4-bit register \code{shiftReg},
 (2) concatenate the lower 3 bits of the shift register with the input \code{din} for the next
-input to the register, and (3) uses the most significant bit (MSB) of the register as the output \code{dout}.
+input to the register, and (3) use the most significant bit (MSB) of the register as the output \code{dout}.
 
 \shortlist{code/shift_register.txt}
 
 Shift registers are often used to convert from serial data to parallel data or from parallel data
-to serial data. Section~\ref{sec:uart} shows a serial port that uses shift registers for the receive and
+to serial data. Section~\ref{sec:uart} shows a serial port that use shift registers for the receive and
 send functions.
 
 \subsection{Shift Register with Parallel Output}
@@ -4068,7 +4068,7 @@ we hide it and avoid polluting the name space. The buffer class has also been
 simplified. Instead of an FSM e use only a single bit, \code{fullReg}, to note
 the state of the buffer: full or empty.
 
-The bubble FIFO is simply, easy to understand, and uses minimal resources.
+The bubble FIFO is simply, easy to understand, and use minimal resources.
 However, as each buffer stage has to toggle between empty and full, the maximum
 bandwidth of this FIFO is two clock cycles per word.
 
@@ -4577,7 +4577,7 @@ e.g., by forking/cloning an \myref{https://github.com/schoeberl/chisel-empty}{em
 renaming it, and removing the \code{.git} folder from it.
 
 Change the \code{build.sbt} to reference the locally published version of Chisel.
-Furthermore, at the time of this writing, the head of Chisel source uses Scala 2.12, but Scala
+Furthermore, at the time of this writing, the head of Chisel source use Scala 2.12, but Scala
 2.12 has troubles with
 \myref{https://github.com/freechipsproject/chisel-template/issues/35}{anonymous bundles}.
 Therefore, you need to add the following Scala option: \code{"-Xsource:2.11"}.
@@ -4665,7 +4665,7 @@ described in Chisel.
 Chisel is embedded in Scala and therefore inherits the powerful
 abstraction of Scala.
 As this book is intended as an introduction, we have restricted
-our examples to simple uses of Scala.
+our examples to simple use of Scala.
 A next logical step is to learn a few basics of Scala and apply them
 to your Chisel project.
 
@@ -4746,7 +4746,7 @@ of the POWER Open ISA. It includes instruction to run Micropython.
 
 \end{description}
 
-If you know an open-source project that uses Chisel, please drop me a note
+If you know an open-source project that use Chisel, please drop me a note
 so I can include it in a future edition of the book.
 
 \chapter{Chisel 2}
@@ -4763,7 +4763,7 @@ Chisel 3:
 \item \myref{https://github.com/schoeberl/chisel-examples/blob/master/TowardsChisel3.md}{Towards Chisel 3}
 \end{itemize}
 
-However, you might get involved in a project that still uses Chisel 2,
+However, you might get involved in a project that still use Chisel 2,
 e.g., the \myref{https://github.com/t-crest/patmos}{Patmos}~\cite{patmos:rts2018} processor.
 Therefore, we provide here some information on Chisel 2 coding for those who
 have started with Chisel 3.
